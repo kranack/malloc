@@ -1,0 +1,52 @@
+/**
+ *
+ * TP_MALLOC.TXT
+ *
+ * Calesse Damien
+ * Hancquart Louis
+ * Groupe 3
+ *
+ * 13/11/2012
+ *
+ **/
+ 
+ 
+ 
+ 1. Bibliothèque Standard
+ 
+    1.2 Possible implémentation de la bibliothèque
+  	
+  	1. - La quantité de mémoire obtenue lors du dernier malloc et non utilisée
+  	   - Une structure de données stockant la mémoire non utilisée
+  	   
+  	2. - Son adresse mémoire
+  	   - Sa taille
+  	   - Le bloc suivant
+  	   
+  	   On stocke tout dans une structure de données
+  	   
+  	   
+	Malloc :
+	 
+	 	si un des blocs mémoires == SIZE alors
+	 		on retoune le bloc à l'utilisateur
+	 	
+	 	si le bloc > SIZE alors
+	 		on divise le bloc
+	 		on retourne un bloc de taille SIZE à l'utilisateur
+	 		on stocke le reste dans la liste des blocs dispos
+	 	
+	 	sinon (recherche de bloc a échoué)
+	 		on demande un nouveau bloc de taille n pour le programme
+	 		
+	 
+	Free :
+	 	
+	 	recherche emplacement
+	 		si le bloc libéré est à coté d'un bloc libre alors
+	 			on fusionne les 2 blocs
+ 		
+ 
+    1.5 
+    
+    
